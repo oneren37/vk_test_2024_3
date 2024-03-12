@@ -6,5 +6,5 @@ export interface ICartItem extends IProduct{
 
 export interface ICartState {
     products: ICartItem[];
-    status: 'idle' | 'loading' | 'failed';
+    status: 'idle' | 'loading' | 'failed' | 'ok'
 }

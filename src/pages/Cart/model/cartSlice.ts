@@ -16,13 +16,13 @@ export const cartSlice = createSlice({
     reducers: {
         increment: (state, action: PayloadAction<{id: IProduct['id']}>) => {
             const product = state.products.find(el => el.id === action.payload.id);
-            if (product) {
+            if (product && product.count < 10) {
                 product.count += 1;
             }
         },
         decrement: (state, action: PayloadAction<{id: IProduct['id']}>) => {
             const product = state.products.find(el => el.id === action.payload.id);
-            if (product) {
+            if (product && product.count > 1) {
                 product.count -= 1;
             }
         },
@@ -36,7 +36,7 @@ export const cartSlice = createSlice({
                 state.status = 'loading';
             })
             .addCase(fetchData.fulfilled, (state, action) => {
-                state.status = 'idle';
+                state.status = 'ok';
                 state.products = action.payload;
             })
             .addCase(fetchData.rejected, (state) => {
