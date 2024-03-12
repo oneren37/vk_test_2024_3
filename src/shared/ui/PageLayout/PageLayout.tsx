@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import {
-    Group,
     SplitCol,
     SplitLayout,
 } from "@vkontakte/vkui";
