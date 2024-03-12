@@ -1,5 +1,7 @@
 # TLDR по решению
 
+Посмотреть деплой можно тут https://vk-test-2024-3.vercel.app/
+
 Проект реализован с помощью
 - React
 - Redux Toolkit
